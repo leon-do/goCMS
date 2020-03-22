@@ -1,15 +1,30 @@
-function goCMS(id, url) {
-  let request = new XMLHttpRequest();
-  request.open("GET", url);
-  request.send();
-  request.onload = () => {
-    if (request.status === 200) {
-      const html = request.response;
-      // throw away header and footer
-      const start = html.indexOf('<div id="contents">');
-      const end = html.indexOf('<div id="footer">');
-      // display
-      document.getElementById(id).innerHTML = html.slice(start, end);
-    }
-  };
+module.exports = function(url) {
+  // return new pending promise
+  return new Promise((resolve, reject) => {
+    // select http or https module, depending on reqested url
+    const lib = url.startsWith("https") ? require("https") : require("http");
+    const request = lib.get(url, response => {
+      // handle http errors
+      if (response.statusCode < 200 || response.statusCode > 299) {
+        reject(
+          new Error("Failed to load page, status code: " + response.statusCode)
+        );
+      }
+      // temporary data holder
+      const body = [];
+      // on every content chunk, push it to the data array
+      response.on("data", chunk => body.push(chunk));
+      // we are done, resolve promise with those joined chunks
+      response.on("end", () => {
+        const html = body.join("");
+        // throw away header and footer
+        const start = html.indexOf('<div id="contents">');
+        const end = html.indexOf('<div id="footer">');
+        // resolve body
+        resolve(html.slice(start, end));
+      });
+    });
+    // handle connection errors of the request
+    request.on("error", err => reject(err));
+  });
 }
