@@ -12,7 +12,7 @@ Copy Link
 
 ## Server Side
 
-`npm install gcms`
+`npm install gocms`
 
 ```javascript
 const gocms = require('./gocms')
