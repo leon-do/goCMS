@@ -1,5 +1,15 @@
 # goCMS
 
+Using Google Docs as a CMS
+
+Publish to Web
+![](https://imgur.com/BtuSUiu.png)
+
+Copy Link
+![](https://imgur.com/1x2VqvS.png)
+
+Embed Code
+
 ```html
 <script src="https://cdn.jsdelivr.net/gh/leon-do/goCMS@1.0/index.js"></script>
 
@@ -9,3 +19,8 @@
   goCMS('myDiv', 'https://docs.google.com/document/d/e/2PACX-1vR6ZWNXClovnICVSfMXgWnsOz8m_6SSMJre8eOhsJpplYqLHQIwG1G2RW0eu5pJQri_YD0Znvnel87t/pub');
 </script>
 ```
+
+![](https://imgur.com/6blMBbL.png)
+
+Your website
+![](https://imgur.com/RxMHnv0.png)
