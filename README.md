@@ -1,7 +1,7 @@
 # goCMS
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/leon-do/goCMS/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/leon-do/goCMS@1.0/index.js"></script>
 
 <div id="myDiv"></div>
 
