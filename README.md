@@ -1,6 +1,6 @@
 # goCMS
 
-Using Google Docs as a CMS
+A CMS using Google Docs
 
 Publish to Web
 ![](https://imgur.com/BtuSUiu.png)
