@@ -15,7 +15,7 @@ Copy Link
 `npm install gocms`
 
 ```javascript
-const gocms = require('./gocms')
+const gocms = require('gocms')
 
 const url = 'https://docs.google.com/document/d/e/2PACX-1vR6ZWNXClovnICVSfMXgWnsOz8m_6SSMJre8eOhsJpplYqLHQIwG1G2RW0eu5pJQri_YD0Znvnel87t/pub'
 
