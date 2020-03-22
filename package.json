@@ -1,6 +1,6 @@
 {
   "name": "gocms",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CMS using Google Docs",
   "main": "index.js",
   "scripts": {
