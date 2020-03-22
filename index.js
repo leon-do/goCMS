@@ -10,8 +10,6 @@ function goCMS(id, url) {
       const end = html.indexOf('<div id="footer">');
       // display
       document.getElementById(id).innerHTML = html.slice(start, end);
-    } else {
-      reject(`error ${request.status} ${requets.statusText})`);
     }
   };
 }
